@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register - Meetup Pakistan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Register for Service</h1>
+  <form id="regForm">
+    <label>Full Name:</label><br />
+    <input type="text" name="fullname" required /><br />
+    <label>Email:</label><br />
+    <input type="email" name="email" required /><br />
+    <label>Phone:</label><br />
+    <input type="tel" name="phone" required /><br />
+    <label>Service Required:</label><br />
+    <select name="service" required>
+      <option value="">Select</option>
+      <option value="meeting">Meeting</option>
+      <option value="bdsm">BDSM</option>
+      <option value="pegging">Pegging</option>
+    </select><br /><br />
+    <button type="submit">Submit</button>
+  </form>
+  <script>
+    document.getElementById('regForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Registration submitted. We will contact you soon.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
